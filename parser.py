@@ -3,6 +3,8 @@ import pandas as pd
 from PyPDF2 import PdfReader
 import re
 
+#THIS IS A COMMENT ADDED
+
 def extract_data_after_nomos_attikis(text):
     pattern = r"ΝΟΜΟΣ ΑΤΤΙΚΗΣ(.{36})"  # Pattern to capture 24 characters after "ΝΟΜΟΣ ΑΤΤΙΚΗΣ"
     matches = re.findall(pattern, text)
