@@ -6,9 +6,9 @@ from datetime import datetime
 
 url = 'http://www.fuelprices.gr/deltia_dn.view'
 
-folder_loc = r'C:\Users\dimma\OneDrive\Υπολογιστής\Πληροφοριακά Συστήματα\Semeter Projects\oil_prices\oil_pdfs'
-if not os.path.exists(folder_loc):
-    os.mkdir(folder_loc)
+folder_loc = r'C:\Users\dimma\oil_prices\oil_pdfs'
+os.makedirs(folder_loc, exist_ok=True)  # This line creates the directory if it doesn't exist
+
 
 response = requests.get(url)
 soup = BeautifulSoup(response.text, 'html.parser')
